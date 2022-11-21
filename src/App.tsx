@@ -29,9 +29,9 @@ function App() {
     setField((oldField) => [...oldField.slice(1), random(2, 8)]);
   }
 
-  const onKeyUp = (e: any) => {
-    if (e.keyCode === KEY_CODE_ARROW_LEFT) match();
-    if (e.keyCode === KEY_CODE_ARROW_RIGHT) dontMatch();
+  const onKeyUp = (e: KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') match();
+    if (e.key === 'ArrowRight') dontMatch();
   }
 
   useEffect(() => {
